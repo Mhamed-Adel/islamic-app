@@ -86,10 +86,10 @@ class HomeHadithState extends State<HomeHadith> {
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
-         elevation: 20.0,
+          elevation: 20.0,
           shape: const CircularNotchedRectangle(),
           notchMargin: 7,
-          // color: ColorApp.green1,
+          color: ColorApp.green1,
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
