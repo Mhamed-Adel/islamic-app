@@ -56,12 +56,16 @@ class HomeHadithState extends State<HomeHadith> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       backgroundColor: ColorApp.offWhite,
       extendBody: true,
-        body: Stack(
-          children: <Widget>[
-            getWedjet(bol),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Stack(
+            children: <Widget>[
+              getWedjet(bol),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.black38,
@@ -82,9 +86,10 @@ class HomeHadithState extends State<HomeHadith> {
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
+         elevation: 20.0,
           shape: const CircularNotchedRectangle(),
           notchMargin: 7,
-          color: ColorApp.green1,
+          // color: ColorApp.green1,
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

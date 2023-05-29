@@ -64,41 +64,46 @@ class AhadithScreen extends StatelessWidget {
           ),
           Expanded(
             flex: 3,
-            child: Stack(            textDirection: TextDirection.rtl,
-
-              children: [
-                SvgPicture.asset(
-                  'assets/svg/background.svg',
-                  fit: BoxFit.cover,
-                  width: double.infinity,
-                ),
-                FutureBuilder(
-                  future: Mydata.getAlldata(),
-                  builder: (BuildContext  context,AsyncSnapshot snapshot) {
-                    if (snapshot.hasData) {
-                      return GridView.builder(
-                        gridDelegate:
-                        const SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 250,
-                            crossAxisSpacing: 5,
-                            mainAxisSpacing: 5),
-                        itemBuilder: (context,int index) {
-                      Hadith item = snapshot.data![index];
-                      return GestureDetector(
-                        onTap: () {
-                          Get.to(HomeHadith(hadith: item));
-                        },
-                        child: ayah(item.key!, item.nameHadith!));
-                        },
-                        itemCount: snapshot.data!.length,
-                      );
-                    } else {
-                      return const Center(child: CircularProgressIndicator());
-                    }
-                  },
-                  
-                )
-              ],
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Stack(            textDirection: TextDirection.rtl,
+            
+                children: [
+                  SvgPicture.asset(
+                    'assets/svg/background.svg',
+                    fit: BoxFit.cover,
+                    width: double.infinity,
+                  ),
+                  FutureBuilder(
+                    future: Mydata.getAlldata(),
+                    builder: (BuildContext  context,AsyncSnapshot snapshot) {
+                      if (snapshot.hasData) {
+                        return GridView.builder(
+            
+                          gridDelegate:
+                          const SliverGridDelegateWithMaxCrossAxisExtent(
+            
+                              maxCrossAxisExtent: 250,
+                              crossAxisSpacing: 5,
+                              mainAxisSpacing: 5),
+                          itemBuilder: (context,int index) {
+                        Hadith item = snapshot.data![index];
+                        return GestureDetector(
+                          onTap: () {
+                            Get.to(HomeHadith(hadith: item));
+                          },
+                          child: ayah(item.key!, item.nameHadith!));
+                          },
+                          itemCount: snapshot.data!.length,
+                        );
+                      } else {
+                        return const Center(child: CircularProgressIndicator());
+                      }
+                    },
+                    
+                  )
+                ],
+              ),
             ),
           )
         ],
@@ -109,17 +114,18 @@ class AhadithScreen extends StatelessWidget {
 
 Widget ayah(String key, name) {
   return Stack(
+    textDirection: TextDirection.rtl,
     alignment: Alignment.center,
     children: [
       Image.asset("assets/images/img.png",),
-      SvgPicture.asset("assets/svg/grey.svg"),
-      Column(            textDirection: TextDirection.rtl,
-
+      SvgPicture.asset("assets/svg/grey.svg",width: 300,),
+      Column(
+        textDirection: TextDirection.rtl,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             key,
-            style: const TextStyle(fontSize: 16, color: ColorApp.yellow1),
+            style: const TextStyle(fontSize: 18, color: ColorApp.yellow1),
           ),
           Text(
             name,
