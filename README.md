@@ -1,4 +1,4 @@
-# ahadeeth_app
+# islamic_app
 
 A new Flutter project.
 
