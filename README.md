@@ -1,3 +1,4 @@
+![home_screen](https://github.com/MohamedElshalkany/islamic-app/assets/127790953/107847b6-9d7f-4253-a00f-0c172fb9ae0c)
 # islamic_app
 
 A new Flutter project.
