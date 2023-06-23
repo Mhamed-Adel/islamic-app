@@ -4,9 +4,10 @@
 - [🆗] Splash Screen
 - [🆗] Home Screen
 - [🆗] Ahadith Screen
+- [🆗] Quraan Screen
 - [🆗] Fav Video Screen
 - [🆗] Audio Ahadith Screen
-- - [x] MVC patterns
+- [x] MVC patterns
 # snapshots 
 
 | Welcome Screen | Ahadith Screen |
