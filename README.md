@@ -1,5 +1,5 @@
 # islamic_app
-## Benfit👻
+
 - [🖥] # Screens 🖥
 - [🆗] Splash Screen
 - [🆗] Home Screen
