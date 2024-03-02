@@ -54,7 +54,7 @@ class MainPage extends StatelessWidget {
                         Colors.green,
                         ColorApp.green2,
                         'قراءة القرأن',
-                        'assets/images/logo.png',
+                        'assets/images/icon.png',
                         'assets/svg/one.svg'),
                   ),
                   GestureDetector(
